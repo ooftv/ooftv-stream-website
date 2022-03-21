@@ -16,3 +16,4 @@ uwsgi_params.default
 win-utf
 .well-known/
 hls/
+live/
