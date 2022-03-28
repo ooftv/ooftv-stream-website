@@ -17,3 +17,5 @@ win-utf
 .well-known/
 hls/
 live/
+stream/
+dash/
