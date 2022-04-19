@@ -1,6 +1,39 @@
+QUICK NOTES:
+
+Reload the config:
+sudo nginx -t && sudo nginx -s reload
+
+Restart the server:
+sudo brew services restart denji/nginx/nginx-full
+
+Tail the logs:
+tail -f /usr/local/var/log/nginx/access.log
+tail -f /usr/local/var/log/nginx/error.log
+
+Refresh the certs:
+
+Refresh duckdns IP:
+
+Validate an HLS stream:
+Check if the oof stream is in compliance with the HLS spec:
+you'll need mediastreamcalidator and hlsreport from developer.apple.com
+
+
+>> mediastreamvalidator https://www.ooftv.net/live/oof.m3u8
+
+since it's a live stream you'll need to stop it with ctrl-c
+
+the results won't be super useful, probably everything will look find. it will also output a vcalidation_data.json
+
+>> hlsreport validation_data.json
+
+this creates a validation_data.html, open it in a browser
+
+
+
 for RTMP / HLS Streaming to work, you need 3 pieces.
 
-why rtmp? why rls? (to be filled in)
+why rtmp? why hls? (to be filled in)
 
 1) You need a video source. This could be a video signal from a camera or hdmi - or it could be a file, or even an rtmp stream
 
